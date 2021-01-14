@@ -1,1 +1,2 @@
 --os.autoloader({load: (os.execute('wget -f ..autoloader.. client/autoload'))})
+os.execute('wget -f https://raw.githubusercontent.com/SanyaRamzik/cw_quickShopClient/main/libs/AdapterHelper/AdapterHelper.lua?token=ASO7RFY7BOKAUCPK6NFKF63ABHW5G /home/lib/AdapterHelper.lua')
