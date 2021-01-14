@@ -1,0 +1,1 @@
+--os.autoloader({load: (os.execute('wget -f ..autoloader.. client/autoload'))})
