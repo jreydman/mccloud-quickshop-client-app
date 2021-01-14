@@ -1,1 +1,145 @@
-<mxfile host="app.diagrams.net" modified="2021-01-14T19:49:02.799Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" version="14.2.3" etag="7cmyfHfS7UgaRPK57ZwT" type="github"><diagram id="fN7fj305gb33zQQMZwl0">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-01-14T20:00:59.427Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="nokfmQSBZZviByixgh5R" version="14.2.3" type="github">
+  <diagram id="fN7fj305gb33zQQMZwl0" name="Page-1">
+    <mxGraphModel dx="8088" dy="3328" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NjfQla641Piweovv61z3-1" value="" style="whiteSpace=wrap;html=1;sketch=0;shadow=0;glass=0;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-2000" y="360" width="480" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NjfQla641Piweovv61z3-3" target="NjfQla641Piweovv61z3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-3" value="Auth func&lt;br&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-1790" y="430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1830" y="710" as="sourcePoint" />
+            <mxPoint x="-1830" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1830" y="680" />
+              <mxPoint x="-1830" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-5" value="while not request.isAccepted(nick)&lt;br&gt;then&lt;br&gt;return &quot;Подтвердите почту!&quot;&lt;br&gt;&lt;br&gt;while request.isAccepted(nick) then&lt;br&gt;return &quot;Введите пароль из письма&quot;&lt;br&gt;&lt;br&gt;while isReg(nick) then&lt;br&gt;return &quot;Использовать 2fa+?&quot;&lt;br&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1920" y="750" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NjfQla641Piweovv61z3-7" target="NjfQla641Piweovv61z3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-7" value="if !sql.select(nickname) {&lt;br&gt;request.reg(nick, mail)&lt;br&gt;pin=new rand(6)&lt;br&gt;sql.add(nickname,mail,pin,status=0)&lt;br&gt;mail.post(mail,token(nickname+pin))&lt;br&gt;}&lt;br&gt;else response auth.true()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1930" y="580" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-8" value="Auth(nick)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1685" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-9" value="&lt;font style=&quot;font-size: 40px&quot; color=&quot;#ffff33&quot;&gt;API&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="770" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=5;strokeColor=#FFFF33;" edge="1" parent="1" source="NjfQla641Piweovv61z3-13" target="NjfQla641Piweovv61z3-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=5;strokeColor=#FFFF33;" edge="1" parent="1" source="NjfQla641Piweovv61z3-13" target="NjfQla641Piweovv61z3-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-370" y="2320" />
+              <mxPoint x="-1160" y="2320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeColor=#FFFF33;strokeWidth=5;" edge="1" parent="1" source="NjfQla641Piweovv61z3-13" target="NjfQla641Piweovv61z3-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-440" y="290" />
+              <mxPoint x="-1160" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-13" value="&lt;font style=&quot;font-size: 22px&quot;&gt;&lt;font color=&quot;#00ffff&quot;&gt;/user/auth?user=nick&lt;/font&gt;&lt;br&gt;if not isValidated() then&lt;br&gt;return json.encode([&#39;valided&#39;]=false) //reg&lt;br&gt;else&lt;br&gt;return json.encode([&#39;valided&#39;]=true) //auth&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#00ffff&quot;&gt;/user/reg?user=nick&amp;amp;mail=userMail&amp;amp;pin=userPin&lt;/font&gt;&lt;br&gt;if sql.get(userMail) then&lt;br&gt;return false&lt;br&gt;else&lt;br&gt;createNewUser(nick, userMail, pin, status =0)&lt;br&gt;if request.args[&#39;pin&#39;] != false then&lt;br&gt;if sql.get(userPin) == request.args[&#39;pin&#39;] then&lt;br&gt;user.status = 1&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#00ffff&quot;&gt;/user/getSlot?server=htserver&amp;amp;mod=&quot;primary&quot; or &quot;all&quot; or &quot;mod&quot;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#00ffff&quot;&gt;/user/getUser?user=nick&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#ffffff&quot;&gt;return money, homewhere, userCart&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#00ffff&quot;&gt;/user/updateUser?&lt;/font&gt;&lt;font color=&quot;#ff0000&quot;&gt;type=log/money/all&lt;/font&gt;&lt;font color=&quot;#00ffff&quot;&gt;&amp;amp;user=nick&amp;amp;logs=dataLog&amp;amp;money=delta&lt;br&gt;&lt;/font&gt;if dataLog[&#39;type&#39;] == &#39;log&#39; then&lt;br&gt;sql.update(logTable, dataLog)&lt;br&gt;elif dataLog[&#39;type&#39;] == &#39;money&#39; then&lt;br&gt;sql.update(users, money)&lt;br&gt;return true&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#00ffff&quot;&gt;/sell/buySlot?user=nick&amp;amp;slot=item&amp;amp;qty=count&lt;/font&gt;&lt;br&gt;updateUser()&lt;br&gt;return true&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-730" y="875" width="720" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-14" value="&lt;font style=&quot;font-size: 33px&quot; color=&quot;#b5739d&quot;&gt;Web client&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1245" y="1280" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-15" value="&lt;font style=&quot;font-size: 30px&quot; color=&quot;#00ffff&quot;&gt;OPC Client&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-1245" y="250" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=5;strokeColor=#00FFFF;" edge="1" parent="1" source="NjfQla641Piweovv61z3-17" target="NjfQla641Piweovv61z3-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-17" value="&lt;span style=&quot;font-size: 32px&quot;&gt;Valide(nick)&lt;br&gt;rstp(auth_api)&lt;br&gt;if auth_api.key then&lt;br&gt;&lt;br&gt;else&lt;br&gt;Reg(nick,mail,null/pin)&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1400" y="320" width="480" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeColor=#FFFF33;strokeWidth=5;" edge="1" parent="1" source="NjfQla641Piweovv61z3-21" target="NjfQla641Piweovv61z3-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#990000;strokeWidth=5;" edge="1" parent="1" source="NjfQla641Piweovv61z3-21" target="NjfQla641Piweovv61z3-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="1880" />
+              <mxPoint x="500" y="1880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.429;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;strokeColor=#990000;strokeWidth=5;" edge="1" parent="1" source="NjfQla641Piweovv61z3-21" target="NjfQla641Piweovv61z3-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-21" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="880" width="560" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-22" value="&lt;font style=&quot;font-size: 45px&quot; color=&quot;#ff3333&quot;&gt;Server&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="485" y="770" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=5;strokeColor=#B5739D;" edge="1" parent="1" source="NjfQla641Piweovv61z3-24" target="NjfQla641Piweovv61z3-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-24" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1390" y="1350" width="480" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-25" value="&lt;span style=&quot;font-size: 46px&quot;&gt;&lt;font style=&quot;font-size: 46px&quot; color=&quot;#99ff99&quot;&gt;SQL&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="525" y="1890" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=classic;endFill=1;strokeWidth=5;strokeColor=#990000;" edge="1" parent="1" source="NjfQla641Piweovv61z3-27" target="NjfQla641Piweovv61z3-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="2240" />
+              <mxPoint x="970" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-27" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1960" width="400" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-28" value="" style="whiteSpace=wrap;html=1;rounded=0;shadow=0;glass=0;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="360" width="460" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-29" value="&lt;font style=&quot;font-size: 45px&quot;&gt;Telegram bot by OB1CHAM&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-215" y="260" width="570" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-30" value="&lt;font style=&quot;font-size: 32px&quot;&gt;Validation(user)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="910" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-31" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="500" width="340" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-32" value="&lt;font style=&quot;font-size: 32px&quot;&gt;Validation(user)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="460" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-33" value="return {key=false,type=user/status}&lt;br&gt;return {key=true,type=ok}" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FF4D00;fontSize=32;" vertex="1" parent="1">
+          <mxGeometry x="310" y="930" width="520" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-34" value="Registration(nickname, mail,null/pin)&lt;br&gt;&lt;font color=&quot;#ff3333&quot;&gt;return {key=false,type=user/mail}&lt;br&gt;return {key=true,type=ok} //введите пинкод&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" vertex="1" parent="1">
+          <mxGeometry x="310" y="980" width="680" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-35" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NjfQla641Piweovv61z3-36" value="&lt;font style=&quot;font-size: 32px&quot;&gt;Reg(nick,mail,null/pin)&lt;br&gt;rstp(reg_api)&lt;br&gt;if rstp.key then ...&lt;br&gt;else chtoto(rstp.type)&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="980" width="350" height="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
