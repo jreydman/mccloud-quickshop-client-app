@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-14T20:05:01.426Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="iwzsboVwvucQpATStZ7g" version="14.2.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-14T20:07:17.799Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="-BK9LFdkBNQ0OvVtEC4N" version="14.2.3" type="github">
   <diagram id="fN7fj305gb33zQQMZwl0" name="Page-1">
     <mxGraphModel dx="3822" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
@@ -132,9 +132,6 @@
         </mxCell>
         <mxCell id="NjfQla641Piweovv61z3-34" value="Registration(nickname, mail,null/pin)&lt;br&gt;&lt;font color=&quot;#ff3333&quot;&gt;return {key=false,type=user/mail}&lt;br&gt;return {key=true,type=ok} //введите пинкод&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
           <mxGeometry x="310" y="980" width="680" height="280" as="geometry" />
-        </mxCell>
-        <mxCell id="NjfQla641Piweovv61z3-35" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-640" y="910" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="NjfQla641Piweovv61z3-36" value="&lt;font style=&quot;font-size: 32px&quot;&gt;Reg(nick,mail,null/pin)&lt;br&gt;rstp(reg_api)&lt;br&gt;if rstp.key then ...&lt;br&gt;else chtoto(rstp.type)&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1080" y="980" width="350" height="320" as="geometry" />
