@@ -1,1 +1,1 @@
-print('tools')
+print('tool')
