@@ -1,2 +1,2 @@
 # cw_quickShopClient
-test
+мы накодили байду (с) Скай не бань
