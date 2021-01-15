@@ -38,7 +38,6 @@ function createFrames(framesProfile)
     end
 end
 
-print()
 createFrames(frames)
 forms.run(frames['main'].obj)
 
