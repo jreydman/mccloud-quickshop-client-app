@@ -27,7 +27,16 @@ frames = {
     }
 }
 
-
+function createFrames(framesProfile)
+    for _,form in pairs(framesProfile) do
+        form.obj = forms.addForm()
+        for frame, frameSettings in pairs(form) do
+            for setting, arg in pairs(frameSettings) do
+                form.obj[setting]=arg
+            end
+        end
+    end
+end
 
 createFrames(frames)
 forms.run(frames['main'].obj)
