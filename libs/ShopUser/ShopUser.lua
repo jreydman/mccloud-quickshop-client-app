@@ -1,6 +1,8 @@
+-- v 0.0.0.1
 -- ShopUser class
-
 ShopUser = {} -- ShopUser = require("ShopUser")
+
+ShopItem = require("ShopProxy/ShopItem")
 
 local debugmode = true
 function ShopUser:new(userHash, userName)
@@ -14,26 +16,28 @@ function ShopUser:new(userHash, userName)
     obj.BeingSoldItems = nil -- array of user items which are being sold 
 
     -- scan chest take only emeralds
-    -- function returns emount of succesfully deposited emeralds nil if any error
+    -- function returns amount of successfully deposited emeralds nil if any error
     function obj:UpBalance()
-        if(debugmode) then print("user:"..self.Name.."UpBalance start") end
-        -- TODO 
+        if (debugmode) then
+            print("user:" .. self.Name .. "UpBalance start")
+        end
+        -- TODO
         --
     end
 
     -- user wants to buy offer
     -- function returns true or reason why deal failed
-    function obj:Buy(offerId, emount)
-        -- TODO 
+    function obj:Buy(shopItemId, amount)
+        -- TODO call to BackEnd
     end
 
     -- Give user item to chest from Basket
-    function obj:GiveOutIem(ItemId, emount)
-        -- TODO 
+    function obj:GiveOutIem(ItemId, amount)
+        -- TODO
         -- LockOtherUserOperations
         -- CallApi
         -- PutToChest
-        -- CallApi 
+        -- CallApi
     end
 
     -- User finished (the user did his thing and walked away)
@@ -47,7 +51,8 @@ function ShopUser:new(userHash, userName)
     end
 
     setmetatable(obj, self)
-    self.__index = self; return obj
+    self.__index = self;
+    return obj
 end
 
 return ShopUser
