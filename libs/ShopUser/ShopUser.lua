@@ -56,3 +56,9 @@ function ShopUser:new(userHash, userName)
 end
 
 return ShopUser
+
+user = ShopUser:new('ReiVanSTR')
+
+function auth(nick)
+    user = ShopUser:new(nick)
+end    

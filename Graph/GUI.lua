@@ -16,28 +16,29 @@ frames = {
     },
     main={frameSettings={
         name='main',
-        left=10,
-        top=10,
+        left=1,
+        top=1,
         W=UI.resolution[1],
         H=UI.resolution[2],
         border=1,
-        color=0xff00ff,
+        color=0xff0040,
         frontColor=UI.defaultForegroundColor,
         isActive=true}
     }
 }
 
+function UI:init()
+
+end
+
 function createFrames(framesProfile)
-    for _,form in pairs(framesProfile) do
+    for key,form in pairs(framesProfile) do
         form.obj = forms.addForm()
-        for frame, frameSettings in pairs(form) do
-            for setting, arg in pairs(frameSettings) do
-                form.obj[setting]=arg
-            end
+        for setting, arg in pairs(framesProfile[key].frameSettings) do
+            form.obj[setting]=arg
         end
     end
 end
 
 createFrames(frames)
 forms.run(frames['main'].obj)
-
