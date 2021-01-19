@@ -27,6 +27,11 @@ function ApiCommunicator:new(playerName)
         return self:MakeRequest(self.Url .. "/user/reg?nickname=" .. self.PlayerName .. "&pin=" .. pin)
     end
 
+    function obj:LogOut()
+        return self:MakeRequest(self.Url .. "/user/logout?nickname=" .. self.PlayerName)
+    end
+
+
     -- returns raw response from api
     function obj:MakeRequest(url)
 
