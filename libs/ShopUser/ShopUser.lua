@@ -1,6 +1,6 @@
 -- v 0.0.0.1
 -- ShopUser class
-ShopUser = {} -- ShopUser = require("ShopUser") shopUser = ShopUser:new("lolo")
+ShopUser = {} -- ShopUser = require("ShopUser") shopUser = ShopUser:new("lolo") shopUser:GetState()
 
 ShopItem = require("ShopProxy/ShopItem")
 ApiCommunicator = require("ApiCommunicator")
@@ -116,7 +116,7 @@ function ShopUser:new(userName)
         self.Hash = nil
         self.Basket = nil -- array of user items which are not being sold (deposited or bought)
         self.BeingSoldItems = nil -- array of user items which are being sold
-        obj.ShopUserState = ShopUserState.Unknown
+        self.ShopUserState = ShopUserState.Unknown
         self.apiCommunicator:LogOut()
     end
 
@@ -126,7 +126,3 @@ function ShopUser:new(userName)
 end
 
 return ShopUser
-
---user = ShopUser:new('ReiVanSTR')
---user:GetState() --makes oauth if not made before
- 
