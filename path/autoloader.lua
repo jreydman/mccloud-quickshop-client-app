@@ -13,3 +13,11 @@ os.execute('wget -f https://raw.githubusercontent.com/SanyaRamzik/cw_quickShopCl
 
 os.execute('mkdir /home/libs/ShopUser')
 os.execute('wget -f https://raw.githubusercontent.com/SanyaRamzik/cw_quickShopClient/main/libs/ShopUser/ShopUser.lua?token=ASO7RF4IITY6CHJWH5CVXW3ABRNWK /home/libs/ShopUser/ShopUser.lua')
+
+os.execute('mkdir /home/libs/ApiCommunicator')
+os.execute('wget -f https://raw.githubusercontent.com/SanyaRamzik/cw_quickShopClient/main/libs/ApiCommunicator/ApiCommunicator.lua?token=ASO7RF75JSLD5L2D6JSU37DACCCGG /home/libs/ApiCommunicator/ApiCommunicator.lua')
+
+
+--Other Libs
+os.execute('wget -f https://raw.githubusercontent.com/SanyaRamzik/cw_quickShopClient/main/libs/json.lua?token=ASO7RF4SS5IROSXO5NUVZZTACCBGY /home/libs/json.lua')
+
