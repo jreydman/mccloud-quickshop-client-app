@@ -1,6 +1,8 @@
 -- v 0.0.0.1
 LuaHelper = {} -- LuaHelper = require("LuaHelper")
 
+LuaHelper.debug = true
+
 function LuaHelper.ManyToString(...)
     local result = ""
     for i, v in ipairs {...} do
@@ -34,6 +36,12 @@ function LuaHelper.PrintObj(obj, hierarchyLevel)
         end
     else
         print(obj)
+    end
+end
+
+function LuaHelper.PrintIfDebug(...)
+    if (LuaHelper.debug) then
+        print(LuaHelper.ManyToString(...))
     end
 end
 
