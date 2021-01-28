@@ -18,7 +18,7 @@ function ShopProxy:new()
         it1.Name = "test Item1 name"
         it2 = ShopItem:new()
         it2.Name = "test Item2 name"
-        local arr = {it1, it2}
+        local arr = {it1, it2} 
         return arr
     end
 

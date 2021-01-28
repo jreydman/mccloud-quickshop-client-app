@@ -1,6 +1,6 @@
--- v 0.0.0.1
+-- v 0.0.0.2
 -- ShopUser class
-ShopUser = {} -- ShopUser = require("ShopUser") shopUser = ShopUser:new("lolo") shopUser:GetState()
+ShopUser = {} -- ShopUser = require("ShopUser") shopUser = ShopUser:new("JReydman") shopUser:GetState() items=shopUser:GetAllItems() 
 
 ShopItem = require("ShopProxy/ShopItem")
 ApiCommunicator = require("ApiCommunicator")
@@ -18,7 +18,6 @@ ShopUserState = {
 local debugmode = true
 function ShopUser:new(userName)
     local obj = {}
-    obj.Balance = nil
     obj.IsUpToDate = false
     obj.Name = userName
     -- obj.Hash = userHash TODO??
@@ -26,16 +25,17 @@ function ShopUser:new(userName)
     obj.BeingSoldItems = nil -- array of user items which are being sold
     obj.apiCommunicator = ApiCommunicator:new(userName)
     obj.ShopUserState = ShopUserState.Unknown
-    obj.SessionId = ""
 
     function obj:GetState()
         if (self.ShopUserState == ShopUserState.Ok) then
-            return ShopUserState.Ok --We know that is ok, in other case we need ask BackEnd
+            return ShopUserState.Ok -- We know that is ok, in other case we need ask BackEnd
+            
         end
         local apiCallRawResult = self.apiCommunicator:GetUser()
         local parsedJson = json.decode(apiCallRawResult)
         if (parsedJson["key"] == true) then
-            self.SessionId = parsedJson["info"]
+            self.apiCommunicator.UserToken = parsedJson["info"]
+            LuaHelper.PrintIfDebug("User got token" .. self.apiCommunicator.UserToken)
             self.ShopUserState = ShopUserState.Ok
             return ShopUserState.Ok
         end
@@ -53,6 +53,18 @@ function ShopUser:new(userName)
             end
         end
         LuaHelper.PrintIfDebug("Unknown APi response", apiCallRawResult)
+
+    end
+
+    function obj:GetBalance()
+        local apiCallRawResult = self.apiCommunicator:GetUserProperties()
+        local parsedJson = json.decode(apiCallRawResult)
+        if (parsedJson["key"]) then
+            return parsedJson.info.server.money
+        else
+            obj.ShopUserState = ShopUserState.Unknown
+            return nil
+        end
 
     end
 
@@ -83,14 +95,32 @@ function ShopUser:new(userName)
         return false
     end
 
+    -- returns all user items (including auk and shop and stash)  see field of item called owner_type
+    function obj:GetAllItems()
+        local apiCallRawResult = self.apiCommunicator:GetAllUsersItems()
+        LuaHelper.PrintIfDebug("GetAllItems apiCallRawResult", apiCallRawResult)
+        local parsedJson = json.decode(apiCallRawResult)
+        local result = {}
+        for i, elem in pairs(parsedJson) do
+            local sI = ShopItem:new()
+            sI:InitFromJson(elem)
+            result[i] = sI
+        end
+        return result
+    end
+
+    function obj:PushItemByFingerPrint(fPrint)
+        local result = self.apiCommunicator:PushItem(fPrint)
+        LuaHelper.PrintIfDebug("PushItemByFingerPrint:", result)
+        return result == "true"
+    end
+
     -- scan chest take only emeralds
     -- function returns amount of successfully deposited emeralds nil if any error
-    function obj:UpBalance()
-        if (debugmode) then
-            print("user:" .. self.Name .. "UpBalance start")
-        end
-        -- TODO
-        --
+    function obj:UpBalance(emeralds)
+        local apiCallRawResult = self.apiCommunicator:UpdateUser("{\"money\": \"p" .. tostring(emeralds) .. "\"}")
+        local parsedJson = json.decode(apiCallRawResult)
+        return parsedJson["key"] == true
     end
 
     -- user wants to buy offer
