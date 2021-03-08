@@ -28,7 +28,7 @@ frames = {
 }
 
 function UI:init()
-
+    --TODO
 end
 
 function createFrames(framesProfile)
