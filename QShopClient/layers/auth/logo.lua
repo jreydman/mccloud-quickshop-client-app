@@ -14,6 +14,55 @@ function Logo:init()
 		"    ░    "
 	}
 
+	obj['U'] = {
+		" █    ██ ",
+		" ██  ▓██▒",
+		"▓██  ▒██░",
+		"▓▓█  ░██░",
+		"▒▒█████▓ ",
+		"░▒▓▒ ▒ ▒ ",
+		"░░▒░ ░ ░ ",
+		" ░░░ ░ ░ ",
+		"   ░     "       
+	}
+
+	obj['I'] = {
+		" ██▓",
+		"▓██▒",
+		"▒██▒",
+		"░██░",
+		"░██░",
+		"░▓  ",
+		" ▒ ░",
+		" ▒ ░",
+		" ░  " 
+	}
+
+	obj['C'] = {
+		" ▄████▄  ",
+		"▒██▀ ▀█  ",
+		"▒▓█    ▄ ",
+		"▒▓▓▄ ▄██▒",
+		"▒ ▓███▀ ░",
+		"░ ░▒ ▒  ░",
+		"  ░  ▒   ",
+		"░        ",
+		"░ ░      ",
+		"░        "
+	}
+
+	obj['K'] = {
+		" ██ ▄█▀",
+		" ██▄█▒ ",
+		"▓███▄░ ",
+		"▓██ █▄ ",
+		"▒██▒ █▄",
+		"▒ ▒▒ ▓▒",
+		"░ ░▒ ▒░",
+		"░ ░░ ░ ",
+		"░  ░   "    
+	}
+
 	obj['S'] = {
 		"  ██████ ",
 		"▒██    ▒ ",
@@ -76,8 +125,9 @@ function Logo:init()
 	function obj:createCaption(charTable) -- {'Char1','Char2'}
 		local captionTable = {}
 		for _, char in pairs(charTable) do
-			table.insert(captionTable, getCharCaption(char))
-		end	
+			table.insert(captionTable, self:getCharCaption(char))
+		end
+		return captionTable
 	end
 
 	setmetatable(obj, self)
